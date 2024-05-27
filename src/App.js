@@ -1,30 +1,32 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { AppBar, Toolbar, Button } from '@mui/material';
-import logo from './assets/logo.png';
-import Home from './components/Home'
-import Products from './components/Products';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Element } from 'react-scroll';
+import Home from './components/Home';
+// import Products from './components/Products';
 import Contact from './components/Contact';
+import './App.css';
+import logo from './assets/logo.png'
 
 function App() {
   return (
     <Router>
-      <AppBar position="static" style={{ backgroundColor: '#003300' }}>
-        <Toolbar>
-          <Link to="/" style={{ textDecoration: 'none', color: 'inherit', flexGrow: 1 }}>
-            <img src={logo} alt="A's Smoke Shop" style={{ height: 50 }} />
-          </Link>
-          <Button color="inherit" component={Link} to="/">Home</Button>
-          <Button color="inherit" component={Link} to="/products">Products</Button>
-          <Button color="inherit" component={Link} to="/contact">Contact</Button>
-        </Toolbar>
-      </AppBar>
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <div className="navbar">
+        <img src={logo} alt="Logo" className="logo" />
+        <div className="nav-links">
+          <a href="#home" className="nav-link">Home</a>
+          <a href="#products" className="nav-link">Products</a>
+          <a href="#contact" className="nav-link">Contact</a>
+        </div>
+      </div>
+      <Element name="home" id="home">
+        <Home />
+      </Element>
+      {/* <Element name="products" id="products">
+        <Products />
+      </Element> */}
+      <Element name="contact" id="contact">
+        <Contact />
+      </Element>
     </Router>
   );
 }

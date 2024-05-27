@@ -4,6 +4,8 @@ body {
   font-family: 'Poppins', sans-serif;
   background: none; /* Remove background image from the body itself */
   position: relative;
+  font-family: 'Kaushan Script', cursive !important; /* Header font */
+  font-size: 1.5rem;
 }
 
 body::before {
@@ -19,10 +21,17 @@ body::before {
   background-repeat: no-repeat;
   filter: blur(2px); /* Adjust the blur intensity here */
   z-index: -1;
-  transform: scale(1.1); /* Slightly scale up to cover edges */
+  transform: scale(1.1); /* Slightly scale up to cover edges */ 
 }
 
 body > * {
   position: relative;
   z-index: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Kaushan Script', cursive !important; /* Header font */
+  font-weight: 400  !important;
+  font-size: 50px;
+  color: white;
 }
