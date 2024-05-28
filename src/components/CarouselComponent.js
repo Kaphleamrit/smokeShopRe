@@ -9,14 +9,13 @@ import '../Carousel.css';
 function CarouselComponent() {
   const items = [
     {
-      name: "Boost Your Performance with Rhino",
-      description: "Unlock your full potential with Rhino, the ultimate sex pill for enhanced performance and stamina. Experience heightened sensations and long-lasting effects.",
-      image: rhinos
-    },
-    {
       name: "Premium Smoking Pipes",
       description: "Discover our range of premium smoking pipes, crafted for the perfect smoking experience. Combining elegance and functionality, our pipes are ideal for both casual and dedicated smokers.",
       image: pipes
+    }, {
+      name: "Boost Your Performance with Rhino",
+      description: "Unlock your full potential with Rhino, the ultimate sex pill for enhanced performance and stamina. Experience heightened sensations and long-lasting effects.",
+      image: rhinos
     },
     {
       name: "Vivazen: Pain Reliever and Energy Support",
@@ -27,7 +26,7 @@ function CarouselComponent() {
 
   return (
     <Container>
-      <Box mt={4}> {/* Adds margin at the top */}
+      <Box mt={4}>
         <Carousel>
           {items.map((item, i) => (
             <Grid container spacing={3} key={i} alignItems="center" justifyContent="center">
