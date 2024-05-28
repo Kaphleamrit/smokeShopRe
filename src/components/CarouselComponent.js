@@ -26,6 +26,7 @@ function CarouselComponent() {
   ], []);
 
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const preloadImages = () => {
@@ -46,11 +47,19 @@ function CarouselComponent() {
     preloadImages();
   }, [items]);
 
+  const handleChange = (index) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <Container className="container" maxWidth="md">
       <Box mt={4}>
         {imagesLoaded ? (
-          <Carousel>
+          <Carousel
+            autoPlay
+            interval={currentIndex === 0 ? 500 : 4000} // 500ms for the first slide, 4000ms for subsequent slides
+            onChange={handleChange}
+          >
             {items.map((item, i) => (
               <Grid container spacing={3} key={i} alignItems="center" justifyContent="center">
                 <Grid item xs={12}>
