@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { Container, Grid, Card, CardMedia, CardContent, Typography, Box, CircularProgress } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import pipes from '../assets/pipes3.jpg';
@@ -7,7 +7,7 @@ import rhinos from '../assets/rhino2.jpg';
 import '../Carousel.css';
 
 function CarouselComponent() {
-  const items = [
+  const items = useMemo(() => [
     {
       name: "Premium Smoking Pipes",
       description: "Discover our range of premium smoking pipes, crafted for the perfect smoking experience. Combining elegance and functionality, our pipes are ideal for both casual and dedicated smokers.",
@@ -23,7 +23,7 @@ function CarouselComponent() {
       description: "Vivazen offers natural pain relief and energy support. Harness the power of herbal ingredients to alleviate pain and boost your energy levels throughout the day.",
       image: vivazen
     }
-  ];
+  ], []);
 
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
@@ -44,7 +44,7 @@ function CarouselComponent() {
     };
 
     preloadImages();
-  }, [items]); // Add items to the dependency array
+  }, [items]);
 
   return (
     <Container maxWidth="md">
