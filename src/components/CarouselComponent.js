@@ -44,7 +44,7 @@ function CarouselComponent() {
     };
 
     preloadImages();
-  }, []);
+  }, [items]); // Add items to the dependency array
 
   return (
     <Container maxWidth="md">
