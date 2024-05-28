@@ -3,7 +3,7 @@
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: rgba(51, 51, 51, 0); /* Semi-transparent background */
+  background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,10 +14,12 @@
 
 .logo {
   height: 60px;
+  max-width: 100%; /* Ensure the logo does not exceed its container */
 }
 
 .nav-links {
   display: flex;
+  flex-wrap: wrap; /* Ensure links wrap on smaller screens */
 }
 
 .nav-link {
@@ -30,4 +32,15 @@
 
 .nav-link:hover {
   color: #ddd;
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .nav-link {
+    margin: 5px 0;
+  }
 }

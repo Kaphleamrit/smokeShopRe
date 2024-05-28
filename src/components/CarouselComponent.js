@@ -47,7 +47,7 @@ function CarouselComponent() {
   }, [items]);
 
   return (
-    <Container maxWidth="md">
+    <Container className="container" maxWidth="md">
       <Box mt={4}>
         {imagesLoaded ? (
           <Carousel>

@@ -2,10 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import Home from './components/Home';
-// import Products from './components/Products';
 import Contact from './components/Contact';
 import './App.css';
-import logo from './assets/logo.png'
+import logo from './assets/logo.png';
 
 function App() {
   return (
@@ -21,9 +20,6 @@ function App() {
       <Element name="home" id="home">
         <Home />
       </Element>
-      {/* <Element name="products" id="products">
-        <Products />
-      </Element> */}
       <Element name="contact" id="contact">
         <Contact />
       </Element>
