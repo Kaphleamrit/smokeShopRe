@@ -14,7 +14,7 @@ function CarouselComponent() {
       image: pipes
     },
     {
-      name: "Boost Your Performance with Rhino",
+      name: "Enhance Performance with Rhino", // Shortened title
       description: "Unlock your full potential with Rhino, the ultimate sex pill for enhanced performance and stamina. Experience heightened sensations and long-lasting effects.",
       image: rhinos
     },

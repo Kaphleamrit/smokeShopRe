@@ -1,7 +1,9 @@
+/* Carousel.css */
+
 .carousel-card {
   width: 100%;
   margin: auto;
-  border-radius: 15px;
+  border-radius: 15px; /* Smooth edges */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
@@ -11,37 +13,38 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 15px; /* Smooth edges */
+  border-top-right-radius: 15px; /* Smooth edges */
 }
 
 .carousel-content {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6); /* Dark background with transparency */
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 12px; /* Slightly increased padding for better text display */
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  transition: opacity 0.5s ease-in-out; /* Smooth transition */
+  border-bottom-left-radius: 15px; /* Smooth edges */
+  border-bottom-right-radius: 15px; /* Smooth edges */
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
 
 .carousel-card:hover .carousel-content {
-  opacity: 1;
+  opacity: 1; /* Show content on hover */
 }
 
 .carousel-title {
-  font-family: 'Kaushan Script', cursive !important;
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-family: 'Kaushan Script', cursive !important; /* Header font */
+  font-size: 1.8rem; /* Decreased font size */
+  margin-bottom: 8px; /* Adjusted margin */
 }
 
 .carousel-description {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif; /* Complimentary font */
+  font-size: 1.1rem; /* Decreased font size */
 }
 
 @media (max-width: 600px) {
@@ -49,11 +52,46 @@
     width: 100%;
   }
 
+  .carousel-content {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
   .carousel-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    margin-bottom: 4px; /* Adjust margin for smaller screens */
   }
 
   .carousel-description {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .carousel-content {
+    padding: 8px; /* Further adjust padding for very small screens */
+  }
+
+  .carousel-title {
+    font-size: 1rem; /* Further adjust font size for very small screens */
+    margin-bottom: 3px; /* Further adjust margin for very small screens */
+  }
+
+  .carousel-description {
+    font-size: 0.8rem; /* Further adjust font size for very small screens */
+  }
+}
+
+@media (max-width: 320px) {
+  .carousel-content {
+    padding: 6px; /* Further adjust padding for very small screens */
+  }
+
+  .carousel-title {
+    font-size: 0.9rem; /* Further adjust font size for very small screens */
+    margin-bottom: 2px; /* Further adjust margin for very small screens */
+  }
+
+  .carousel-description {
+    font-size: 0.7rem; /* Further adjust font size for very small screens */
   }
 }
