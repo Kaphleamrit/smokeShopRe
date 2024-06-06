@@ -10,17 +10,17 @@ function CarouselComponent() {
   const items = useMemo(() => [
     {
       name: "Premium Smoking Pipes",
-      description: "Discover our range of premium smoking pipes, crafted for the perfect smoking experience. Combining elegance and functionality, our pipes are ideal for both casual and dedicated smokers.",
+      description: "Discover our premium smoking pipes, crafted for the perfect experience. Elegant and functional, ideal for both casual and dedicated smokers.",
       image: pipes
     },
     {
       name: "Enhance Performance with Rhino", // Shortened title
-      description: "Unlock your full potential with Rhino, the ultimate sex pill for enhanced performance and stamina. Experience heightened sensations and long-lasting effects.",
+      description: "Unlock your potential with Rhino, the ultimate sex pill for enhanced performance and stamina.",
       image: rhinos
     },
     {
       name: "Vivazen: Pain Reliever and Energy Support",
-      description: "Vivazen offers natural pain relief and energy support. Harness the power of herbal ingredients to alleviate pain and boost your energy levels throughout the day.",
+      description: "Vivazen provides natural pain relief and energy support with herbal ingredients to alleviate pain and boost energy levels.",
       image: vivazen
     }
   ], []);
