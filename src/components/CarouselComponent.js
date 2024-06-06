@@ -20,7 +20,8 @@ function CarouselComponent() {
     },
     {
       name: "Vivazen: Pain Reliever and Energy Support",
-      description: "Natural pain relief and energy support with herbal ingredients"
+      description: "Natural pain relief and energy support with herbal ingredients",
+      image: vivazen
     }
   ], []);
 
