@@ -44,7 +44,6 @@ const products = [
 const cardStyles = {
   backgroundColor: 'rgba(0, 0, 0, 0.8)',
   color: 'white',
-  fontFamily: 'Kaushan Script',
   transition: 'transform 0.3s, box-shadow 0.3s',
   '&:hover': {
     transform: 'scale(1.05)',
@@ -73,6 +72,7 @@ const titleStyles = {
   padding: '8px',
   borderRadius: '10px',
   marginBottom: '8px',
+  fontFamily: 'Kaushan Script'
 };
 
 function Home() {
