@@ -1,6 +1,8 @@
 import React from 'react';
-import { Container, Typography, Paper, Box, Divider } from '@mui/material';
+import { Container, Typography, Paper, Box, Divider, IconButton } from '@mui/material';
 import { styled } from '@mui/system';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 const StyledContainer = styled(Container)({
   padding: '40px',
@@ -24,6 +26,11 @@ const StyledTypography = styled(Typography)({
   fontWeight: '600',
   letterSpacing: '0.5px',
   marginBottom: '20px',
+});
+
+const SocialIconButton = styled(IconButton)({
+  color: 'white',
+  margin: '0 10px',
 });
 
 const Contact = () => {
@@ -55,6 +62,19 @@ const Contact = () => {
             </a>
           </Typography>
         </Box>
+        <Box marginTop="20px">
+          <Typography variant="h6" gutterBottom style={{ color: 'white', fontWeight: '400', marginBottom: '10px' }}>
+            Our Social Handles:
+          </Typography>
+          <Box display="flex" justifyContent="flex-start">
+            <SocialIconButton aria-label="instagram" href="https://www.instagram.com/asmokevapeshop?igsh=OGQ5ZDc2ODk2ZA==" target="_blank" rel="noopener noreferrer">
+              <InstagramIcon fontSize="large" />
+            </SocialIconButton>
+            <SocialIconButton aria-label="facebook" href="https://www.facebook.com/asmoke.vapeshop?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
+              <FacebookIcon fontSize="large" />
+            </SocialIconButton>
+          </Box>
+        </Box>
         <div style={{ width: '100%', height: '400px', marginTop: '20px', borderRadius: '10px', overflow: 'hidden' }}>
           <iframe
             title="Google Map of 16111 Lakewood Blvd, Bellflower, CA 90706"
@@ -66,10 +86,14 @@ const Contact = () => {
             loading="lazy"
           ></iframe>
         </div>
+        <Box marginTop="20px">
+          <Typography variant="body2" style={{ color: 'white', textAlign: 'center' }}>
+            &copy; {new Date().getFullYear()} A's Smoke Shop
+          </Typography>
+        </Box>
       </StyledPaper>
     </StyledContainer>
   );
 };
 
 export default Contact;
- 
